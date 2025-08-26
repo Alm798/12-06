@@ -107,30 +107,4 @@ show databases;
 
 *Приложите скриншоты конфигурации, выполнения работы: состояния и режимы работы серверов.*
 
-#### На желаемом втором мастере посмотреть позицию: 
-```sql
-show master status;
-```
-![12-6-3-1](https://github.com/Alm798/12-06/blob/main/img/12-6-3-1.png)
- 
-#### На старом мастере:
-```sql
-CHANGE MASTER TO MASTER_HOST='192.168.*.*', MASTER_USER='replication', MASTER_PASSWORD='Repl11Pass!', MASTER_LOG_FILE = 'mybin.000001', MASTER_LOG_POS = (число из колонки position из статуса мастера);
-```
-```sql
-START SLAVE;
-```
-```sql
-SHOW SLAVE STATUS\G;
-```
-![12-6-3-2](https://github.com/Alm798/12-06/blob/main/img/12-6-3-2.png)
 
-#### На новом мастере:
-```sql
-create database zadanie_3;
-```
-#### На старом мастере:
-```sql
-show databases;
-```
-![12-6-3](https://github.com/Alm798/12-06/blob/main/img/12-6-3-3.png)
