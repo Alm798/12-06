@@ -87,7 +87,7 @@ SHOW SLAVE STATUS\G;
 ![12-6-2-2](https://github.com/Alm798/12-06/blob/main/img/12-6-2-2.png)
 #### На мастере: 
 ```sql
-create database hw_12_6_Golikov;
+create database hw_12_6_Miheev;
 ```
 #### На слэйве:
 ```sql
